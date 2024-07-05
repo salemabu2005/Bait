@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bait - Ultimate Comfort Experience</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2F4F4F; /* Dark Slate Gray from the logo */
+            background-color: #F0F8FF; /* Alice Blue for a light background */
+        }
+        header {
+            background-color: #2F4F4F; /* Dark Slate Gray from the logo */
+            color: white;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav .cart-icon {
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+        .hero {
+            background: url('PICTURES/pic.jpeg') no-repeat center center/cover;
+            color: #2F4F4F;
+            text-align: center;
+            padding: 9rem 2rem;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(47, 79, 79, 0.5); /* Dark Slate Gray with 50% opacity */
+            z-index: 1;
+        }
+        .hero h1, .hero p, .hero button {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .hero button {
+            background-color: #2F4F4F;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .products, .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .product, .testimonial {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img, .testimonial img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product button {
+            background-color: #2F4F4F;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #2F4F4F;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <img src="PICTURES/Screenshot 2024-06-30 024958.png" alt="Bait Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> (<span id="cartItemCount">0</span>)</a>
+                 </nav>
+        </div>
+    </header>
+    <div class="hero">
+        <h1>Discover Ultimate Comfort</h1>
+        <p>Premium Quality Pillows, Blankets, and Towels</p>
+        <nav>
+            <button><a href="shop.html">Shop Now</a></button>
+        </nav>
+    </div>
+    <div class="section">
+        <h2>Our Bestsellers</h2>
+        <div class="products">
+            <div class="product">
+                <img src="PICTURES/pellow1.jpg" alt="Cozy Pillow">
+                <h3>Cozy Pillow</h3>
+                <p>20 LYD</p>
+                <nav>
+                <button><a href="shop.html">Go shopping</a></button>
+                </nav>
+            </div>
+            <div class="product">
+                <img src="PICTURES/BLANKET1.jpg" alt="Soft Blanket">
+                <h3>Soft Blanket</h3>
+                <p>50 LYD</p>
+                <nav>
+                <button><a href="shop.html">Go shopping</a></button>
+                </nav>
+            </div>
+            <div class="product">
+                <img src="PICTURES/towel1.jpg" alt="Plush Towel">
+                <h3>Plush Towel</h3>
+                <p>15 LYD</p>
+                <nav>
+                <button><a href="shop.html">Go shopping</a></button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Why Choose Bait?</h2>
+        <div class="products">
+            <div class="product">
+                <img src="PICTURES/highquality.png" alt="High-Quality Materials">
+                <h3>High-Quality Materials</h3>
+                <p>We use only the finest materials for ultimate comfort.</p>
+            </div>
+            <div class="product">
+                <img src="PICTURES/low-price.png" alt="Affordable Prices">
+                <h3>Affordable Prices</h3>
+                <p>Get the best value for your money with our affordable prices.</p>
+            </div>
+            <div class="product">
+                <img src="PICTURES/fast--shipping.png" alt="Fast Shipping">
+                <h3>Fast Shipping</h3>
+                <p>Enjoy fast and reliable shipping across Libya.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"The pillows are incredibly comfortable and the quality is top-notch!"</p>
+                <h4>Ahmed A.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"I love the blankets, they are so soft and cozy!"</p>
+                <h4>Fatima B.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Great towels, they dry quickly and feel great on the skin."</p>
+                <h4>Omar S.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and special offers.</p>
+        <form id="subscribeForm">
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="thankYouMessage" style="display: none;">Thank you for subscribing!</p>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="index.html">Home</a> | 
+            <a href="shop.html">Shop</a> | 
+            <a href="about.html">About Us</a> | 
+            <a href="contact.html">Contact Us</a> 
+        </div>
+        <p>Contact us: admin@hololacademy.com | +218-91-6346596 | Tripoli, Libya</p>
+        <p>
+            <a href="https://www.facebook.com/HololAcademy/">Facebook</a> | 
+            <a href="https://www.instagram.com/hololacademy/?hl=en">Instagram</a> | 
+            <a href="https://ly.linkedin.com/company/hololacademy">Linkden</a>
+            <p>&copy; 2024. Powerd by Salem Abusahmen.</p>
+        </p>
+    </footer>
+        <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the email input value
+            const email = document.getElementById('emailInput').value.trim();
+
+            // Validate email format
+            if (!isValidEmail(email)) {
+                document.getElementById('invalidEmailMessage').style.display = 'block';
+                return;
+            }
+
+            // Simulate sending subscription data to server (for demonstration)
+            console.log(`Subscribed with email: ${email}`);
+
+            // Display thank you message and hide the form
+            document.getElementById('subscribeForm').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+            document.getElementById('invalidEmailMessage').style.display = 'none';
+        });
+
+        function isValidEmail(email) {
+            // Basic email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+    <script>
+        // Function to add items to cart
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        // Function to update cart count in the header
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cartItemCount').textContent = cart.length;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+
+</body>
+</html>

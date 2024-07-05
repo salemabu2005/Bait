@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bait - Ultimate Comfort Experience</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2F4F4F; /* Dark Slate Gray from the logo */
+            background-color: #F0F8FF; /* Alice Blue for a light background */
+        }
+        header {
+            background-color: #2F4F4F; /* Dark Slate Gray from the logo */
+            color: white;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav .cart-icon {
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+        .hero {
+            background: url('../pic.jpeg') no-repeat center center/cover;
+            color: #2F4F4F;
+            text-align: center;
+            padding: 9rem 2rem;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(47, 79, 79, 0.5); /* Dark Slate Gray with 50% opacity */
+            z-index: 1;
+        }
+        .hero h1, .hero p, .hero button {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .hero button {
+            background-color: #2F4F4F;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .products, .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .product, .testimonial {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img, .testimonial img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product button {
+            background-color: #2F4F4F;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #2F4F4F;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <img src="PICTURES/Screenshot 2024-06-30 024958.png" alt="Bait Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <!-- New cart icon -->
+            <a href="cart.html" id="cartIcon2"><i class="fas fa-shopping-cart cart-icon"></i></a>
+        </nav>
+    </div>
+</header>
+    <div class="section">
+        <h2>Our Products</h2>
+        <div class="products">
+<!-- Pillows -->
+<div class="product">
+    <img src="PICTURES/pellow1.jpg" alt="Cozy Pillow">
+    <h3>Cozy Pillow</h3>
+    <p>20 LYD</p>
+    <p>Experience ultimate comfort with our Cozy Pillow, perfect for a relaxing night's sleep. Its plush, soft texture ensures you wake up refreshed every morning.</p>
+    <button onclick="addToCart(1)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/pillow2.jpg" alt="Soft Pillow">
+    <h3>Soft Pillow</h3>
+    <p>22 LYD</p>
+    <p>Indulge in unparalleled softness with our Soft Pillow. Crafted with premium materials, it offers exceptional support and comfort, making it ideal for all sleep positions.</p>
+    <button onclick="addToCart(2)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/pillow3.jpg" alt="Luxury Pillow">
+    <h3>Luxury Pillow</h3>
+    <p>25 LYD</p>
+    <p>Elevate your sleep experience with our Luxury Pillow. Featuring a luxurious design and superior filling, it provides unmatched neck support and relaxation.</p>
+    <button onclick="addToCart(3)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/pillow4.jpg" alt="Ergonomic Pillow">
+    <h3>Ergonomic Pillow</h3>
+    <p>28 LYD</p>
+    <p>Enhance your posture and comfort with our Ergonomic Pillow. Designed to align your spine while you sleep, it reduces neck and back pain for a rejuvenating night.</p>
+    <button onclick="addToCart(4)">Add to Cart</button>
+</div>
+<!-- Blankets -->
+<div class="product">
+    <img src="PICTURES/BLANKET1.jpg" alt="Soft Blanket">
+    <h3>Soft Blanket</h3>
+    <p>50 LYD</p>
+    <p>Wrap yourself in pure luxury with our Soft Blanket. Crafted from the finest materials, it offers warmth and coziness, perfect for chilly evenings at home.</p>
+    <button onclick="addToCart(5)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/blanket2.jpg" alt="Fuzzy Blanket">
+    <h3>Fuzzy Blanket</h3>
+    <p>55 LYD</p>
+    <p>Stay warm and stylish with our Fuzzy Blanket. Its plush texture and vibrant colors add a touch of elegance to any room, making it a must-have accessory.</p>
+    <button onclick="addToCart(6)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/blanket3.jpg" alt="Plush Blanket">
+    <h3>Plush Blanket</h3>
+    <p>60 LYD</p>
+    <p>Experience unparalleled comfort with our Plush Blanket. Its luxurious feel and lightweight design make it perfect for all seasons, providing warmth without weight.</p>
+    <button onclick="addToCart(7)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/blanket4.jpg" alt="Warm Blanket">
+    <h3>Warm Blanket</h3>
+    <p>65 LYD</p>
+    <p>Cozy up with our Warm Blanket on cold nights. Its soft, insulating fabric traps heat to keep you snug and comfortable, ensuring a restful sleep.</p>
+    <button onclick="addToCart(8)">Add to Cart</button>
+</div>
+<!-- Towels -->
+<div class="product">
+    <img src="PICTURES/towel1.jpg" alt="Plush Towel">
+    <h3>Plush Towel</h3>
+    <p>15 LYD</p>
+    <p>Indulge in spa-like luxury with our Plush Towel. Made from premium cotton, it absorbs moisture quickly and feels gentle on your skin, perfect for everyday use.</p>
+    <button onclick="addToCart(9)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/towel2.jpg" alt="Soft Towel">
+    <h3>Soft Towel</h3>
+    <p>18 LYD</p>
+    <p>Wrap yourself in softness with our Soft Towel. Its plush texture and absorbent fibers make drying off a delightful experience after every bath or shower.</p>
+    <button onclick="addToCart(10)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/towel3.jpg" alt="Luxury Towel">
+    <h3>Luxury Towel</h3>
+    <p>20 LYD</p>
+    <p>Experience the pinnacle of luxury with our Luxury Towel. Crafted for exceptional softness and durability, it adds a touch of elegance to your bathroom.</p>
+    <button onclick="addToCart(11)">Add to Cart</button>
+</div>
+<div class="product">
+    <img src="PICTURES/towel4.jpg" alt="Cotton Towel">
+    <h3>Cotton Towel</h3>
+    <p>22 LYD</p>
+    <p>Enjoy the softness and absorbency of our Cotton Towel. Made from 100% pure cotton, it remains soft and plush wash after wash, ensuring long-lasting comfort.</p>
+    <button onclick="addToCart(12)">Add to Cart</button>
+</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="index.html">Home</a> | 
+            <a href="shop.html">Shop</a> | 
+            <a href="about.html">About Us</a> | 
+            <a href="contact.html">Contact Us</a> | 
+        </div>
+        <p>Contact us: admin@hololacademy.com | +218-91-6346596 | Tripoli, Libya</p>
+        <p>
+            <a href="https://www.facebook.com/HololAcademy/">Facebook</a> | 
+            <a href="https://www.instagram.com/hololacademy/?hl=en">Instagram</a> | 
+            <a href="https://ly.linkedin.com/company/hololacademy">Linkden</a>
+            <p>&copy; 2024. Powerd by Salem Abusahmen.</p>
+        </p>
+    </footer>
+    <script>
+        function addToCart(productId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let product = {
+                id: productId,
+                name: '',
+                price: 0,
+                description: '',
+                quantity: 1,
+                imageSrc: ''
+             };
+            
+            // Logic to get product details based on productId
+            switch (productId) {
+                case 1:
+                    product.name = 'Cozy Pillow';
+                    product.price = 20;
+                    product.description = 'Experience ultimate comfort with our Cozy Pillow, perfect for a relaxing nights sleep. Its plush, soft texture ensures you wake up refreshed every morning.';
+                    product.imgSrc = 'PICTURES/pellow1.jpg'
+                    break;
+                case 2:
+                    product.name = 'Soft Pillow';
+                    product.price = 22;
+                    product.description = 'Indulge in unparalleled softness with our Soft Pillow. Crafted with premium materials, it offers exceptional support and comfort, making it ideal for all sleep positions.'
+                    product.imgSrc = 'PICTURES/pillow2.jpg'
+                    break;
+                case 3:
+                    product.name = 'Luxury Pillow';
+                    product.price = 25;
+                    product.description = 'Elevate your sleep experience with our Luxury Pillow. Featuring a luxurious design and superior filling, it provides unmatched neck support and relaxation.'
+                    product.imgSrc = 'PICTURES/pillow3.jpg'
+                    break;
+                case 4:
+                    product.name = 'Ergonomic Pillow';
+                    product.price = 28;
+                    product.description = 'Enhance your posture and comfort with our Ergonomic Pillow. Designed to align your spine while you sleep, it reduces neck and back pain for a rejuvenating night.'
+                    product.imgSrc = 'PICTURES/pillow4.jpg'
+                    break;
+                case 5:
+                    product.name = 'Soft Blanket';
+                    product.price = 50;
+                    product.description = 'Wrap yourself in pure luxury with our Soft Blanket. Crafted from the finest materials, it offers warmth and coziness, perfect for chilly evenings at home.'
+                    product.imgSrc = 'PICTURES/BLANKET1.jpg'
+                    break;
+                case 6:
+                    product.name = 'Fuzzy Blanket';
+                    product.price = 55;
+                    product.description = 'Stay warm and stylish with our Fuzzy Blanket. Its plush texture and vibrant colors add a touch of elegance to any room, making it a must-have accessory.'
+                    product.imgSrc = 'PICTURES/blanket2.jpg'
+                    break;
+                case 7:
+                    product.name = 'Plush Blanket';
+                    product.price = 60;
+                    product.description = 'Experience unparalleled comfort with our Plush Blanket. Its luxurious feel and lightweight design make it perfect for all seasons, providing warmth without weight.'
+                    product.imgSrc = 'PICTURES/blanket3.jpg'
+                    break;
+                case 8:
+                    product.name = 'Warm Blanket';
+                    product.price = 65;
+                    product.description = 'Cozy up with our Warm Blanket on cold nights. Its soft, insulating fabric traps heat to keep you snug and comfortable, ensuring a restful sleep.'
+                    product.imgSrc = 'PICTURES/blanket4.jpg'
+                    break;
+                case 9:
+                    product.name = 'Plush Towel';
+                    product.price = 15;
+                    product.description = 'Indulge in spa-like luxury with our Plush Towel. Made from premium cotton, it absorbs moisture quickly and feels gentle on your skin, perfect for everyday use.'
+                    product.imgSrc = 'PICTURES/towel1.jpg'
+                    break;
+                case 10:
+                    product.name = 'Soft Towel';
+                    product.price = 18;
+                    product.description = 'Wrap yourself in softness with our Soft Towel. Its plush texture and absorbent fibers make drying off a delightful experience after every bath or shower.'
+                    product.imgSrc = 'PICTURES/towel2.jpg'
+                    break;
+                case 11:
+                    product.name = 'Luxury Towel';
+                    product.price = 20;
+                    product.description = 'Experience the pinnacle of luxury with our Luxury Towel. Crafted for exceptional softness and durability, it adds a touch of elegance to your bathroom.'
+                    product.imgSrc = 'PICTURES/towel3.jpg'
+                    break;
+                case 12:
+                    product.name = 'Cotton Towel';
+                    product.price = 22;
+                    product.description = 'Enjoy the softness and absorbency of our Cotton Towel. Made from 100% pure cotton, it remains soft and plush wash after wash, ensuring long-lasting comfort.'
+                    product.imgSrc = 'PICTURES/towel4.jpg'
+                    break;
+                default:
+                    break;
+            }
+            
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartIcon();
+        }
+
+        function updateCartIcon(productAdded) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartIcon = document.querySelector('.cart-icon');
+            if (cartIcon) {
+                cartIcon.innerHTML = `<i class="fas fa-shopping-cart"></i> (${cart.length})`;
+                
+                 if (productAdded) {
+                let cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `<img src="${productAdded.imageSrc}" alt="${productAdded.name}">
+                                      <span>${productAdded.name}</span>
+                                      <span>Quantity: ${productAdded.quantity}</span>`;
+                cartIcon.appendChild(cartItem);
+            }
+        }
+
+        if (cartIcon2) {
+            cartIcon2.innerHTML = `<i class="fas fa-shopping-cart"></i> (${cart.length})`;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartIcon();
+        });
+    </script>
+    <script>function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let product = {
+        id: productId,
+        name: '',
+        price: 0,
+        description: '',
+        quantity: 1,
+        imageSrc: ''
+    };
+    
+    // Logic to get product details based on productId
+    switch (productId) {
+        case 1:
+            product.name = 'Cozy Pillow';
+            product.price = 20;
+            product.description = 'Experience ultimate comfort with our Cozy Pillow, perfect for a relaxing nights sleep. Its plush, soft texture ensures you wake up refreshed every morning.';
+            product.imgSrc = 'PICTURES/pellow1.jpg'
+            break;
+        case 2:
+            product.name = 'Soft Pillow';
+            product.price = 22;
+            product.description = 'Indulge in unparalleled softness with our Soft Pillow. Crafted with premium materials, it offers exceptional support and comfort, making it ideal for all sleep positions.'
+            product.imgSrc = 'PICTURES/pillow2.jpg'
+            break;
+        case 3:
+            product.name = 'Luxury Pillow';
+            product.price = 25;
+            product.description = 'Elevate your sleep experience with our Luxury Pillow. Featuring a luxurious design and superior filling, it provides unmatched neck support and relaxation.'
+            product.imgSrc = 'PICTURES/pillow3.jpg'
+            break;
+        case 4:
+            product.name = 'Ergonomic Pillow';
+            product.price = 28;
+            product.description = 'Enhance your posture and comfort with our Ergonomic Pillow. Designed to align your spine while you sleep, it reduces neck and back pain for a rejuvenating night.'
+            product.imgSrc = 'PICTURES/pillow4.jpg'
+            break;
+        case 5:
+            product.name = 'Soft Blanket';
+            product.price = 50;
+            product.description = 'Wrap yourself in pure luxury with our Soft Blanket. Crafted from the finest materials, it offers warmth and coziness, perfect for chilly evenings at home.'
+            product.imgSrc = 'PICTURES/BLANKET1.jpg'
+            break;
+        case 6:
+            product.name = 'Fuzzy Blanket';
+            product.price = 55;
+            product.description = 'Stay warm and stylish with our Fuzzy Blanket. Its plush texture and vibrant colors add a touch of elegance to any room, making it a must-have accessory.'
+            product.imgSrc = 'PICTURES/blanket2.jpg'
+            break;
+        case 7:
+            product.name = 'Plush Blanket';
+            product.price = 60;
+            product.description = 'Experience unparalleled comfort with our Plush Blanket. Its luxurious feel and lightweight design make it perfect for all seasons, providing warmth without weight.'
+            product.imgSrc = 'PICTURES/blanket3.jpg'
+            break;
+        case 8:
+            product.name = 'Warm Blanket';
+            product.price = 65;
+            product.description = 'Cozy up with our Warm Blanket on cold nights. Its soft, insulating fabric traps heat to keep you snug and comfortable, ensuring a restful sleep.'
+            product.imgSrc = 'PICTURES/blanket4.jpg'
+            break;
+        case 9:
+            product.name = 'Plush Towel';
+            product.price = 15;
+            product.description = 'Indulge in spa-like luxury with our Plush Towel. Made from premium cotton, it absorbs moisture quickly and feels gentle on your skin, perfect for everyday use.'
+            product.imgSrc = 'PICTURES/towel1.jpg'
+            break;
+        case 10:
+            product.name = 'Soft Towel';
+            product.price = 18;
+            product.description = 'Wrap yourself in softness with our Soft Towel. Its plush texture and absorbent fibers make drying off a delightful experience after every bath or shower.'
+            product.imgSrc = 'PICTURES/towel2.jpg'
+            break;
+        case 11:
+            product.name = 'Luxury Towel';
+            product.price = 20;
+            product.description = 'Experience the pinnacle of luxury with our Luxury Towel. Crafted for exceptional softness and durability, it adds a touch of elegance to your bathroom.'
+            product.imgSrc = 'PICTURES/towel3.jpg'
+            break;
+        case 12:
+            product.name = 'Cotton Towel';
+            product.price = 22;
+            product.description = 'Enjoy the softness and absorbency of our Cotton Towel. Made from 100% pure cotton, it remains soft and plush wash after wash, ensuring long-lasting comfort.'
+            product.imgSrc = 'PICTURES/towel4.jpg'
+            break;
+        default:
+            break;
+    }
+    
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartIcon();
+
+    // Display a message to the user
+    alert(`"${product.name}" added to cart.`);
+}
+</script>
+<script>function updateCartIcon(productAdded) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartIcon = document.querySelector('.cart-icon');
+    let cartIcon2 = document.getElementById('cartIcon2');
+    
+    if (cartIcon) {
+        cartIcon.innerHTML = `<i class="fas fa-shopping-cart"></i> (${cart.length})`;
+        
+         if (productAdded) {
+                let cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `<img src="${productAdded.imageSrc}" alt="${productAdded.name}">
+                                      <span>${productAdded.name}</span>
+                                      <span>Quantity: ${productAdded.quantity}</span>`;
+                cartIcon.appendChild(cartItem);
+        }
+    }
+    
+    if (cartIcon2) {
+        cartIcon2.innerHTML = `<i class="fas fa-shopping-cart"></i> (${cart.length})`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartIcon();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bait</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2F4F4F; /* Dark Slate Gray from the logo */
+            background-color: #F0F8FF; /* Alice Blue for a light background */
+        }
+        header {
+            background-color: #2F4F4F; /* Dark Slate Gray from the logo */
+            color: white;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav .cart-icon {
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+        .hero {
+            background: url('about-hero.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-color: #2F4F4F; /* Dark Slate Gray */
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .section h2 {
+            color: #2F4F4F; /* Dark Slate Gray */
+        }
+        .products, .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .product, .testimonial {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img, .testimonial img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product button {
+            background-color: #2F4F4F; /* Dark Slate Gray */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #2F4F4F; /* Dark Slate Gray */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="PICTURES/Screenshot 2024-06-30 024958.png" alt="Bait Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> (<span id="cartItemCount">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+        <h1>About Bait</h1>
+        <p>Discover the story behind our commitment to ultimate comfort.</p>
+    </div>
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>At Bait, our mission is to provide our customers with the highest quality comfort products at affordable prices. We believe that everyone deserves a good night's sleep and a cozy home environment, and we are dedicated to making that a reality for all our customers.</p>
+    </div>
+    <div class="section">
+        <h2>Our Values</h2>
+        <div class="products">
+            <div class="product">
+                <img src="PICTURES/highquality.png" alt="High-Quality Materials">
+                <h3>Quality</h3>
+                <p>We are committed to using only the finest materials to ensure our products offer the ultimate comfort and durability.</p>
+            </div>
+            <div class="product">
+                <img src="PICTURES/customer-service.png" alt="Exceptional Customer Service">
+                <h3>Customer Service</h3>
+                <p>Our customers are our top priority. We strive to provide exceptional service and support to ensure your satisfaction with every purchase.</p>
+            </div>
+            <div class="product">
+                <img src="PICTURES/inovation.png" alt="Innovation">
+                <h3>Innovation</h3>
+                <p>We continually seek new and innovative ways to improve our products and services, ensuring that we stay at the forefront of the industry.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Our History</h2>
+        <p>Bait was founded in 2010 in Tripoli, Libya, with the vision of creating a brand that offers high-quality comfort products to enhance everyday living. Over the years, we have grown from a small family-owned business to a trusted name in the industry, known for our dedication to quality, affordability, and customer satisfaction.</p>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="index.html">Home</a> | 
+            <a href="shop.html">Shop</a> | 
+            <a href="#">About Us</a> | 
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p>Contact us: admin@hololacademy.com | +218-91-6346596 | Tripoli, Libya</p>
+        <p>
+            <a href="https://www.facebook.com/HololAcademy/">Facebook</a> | 
+            <a href="https://www.instagram.com/hololacademy/?hl=en">Instagram</a> | 
+            <a href="https://ly.linkedin.com/company/hololacademy">Linkden</a>
+        </p>
+        <p>&copy; 2024. Powered by Salem Abusahmen.</p>
+    </footer>
+    <script>
+        // Function to add items to cart
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        // Function to update cart count in the header
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cartItemCount').textContent = cart.length;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+</body>
+</html>
